@@ -6,9 +6,16 @@ import router from './router'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import Vue from 'vue'
+import UrlApi from './api/UrlApi'
+import Cube from 'cube-ui'
+
+Vue.use(Cube)
+
+
 Vue.use(MintUI)
 
 Vue.config.productionTip = false
+Vue.prototype.$urlApi = UrlApi;
 Vue.prototype.getViewportSize = function(){
   return {
     width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
