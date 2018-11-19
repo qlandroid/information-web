@@ -1,7 +1,7 @@
 <template>
   <div class="information-item">
     <div class="ifm-img-box">
-      <img src="../../assets/logo.png" class="ifm-img"/>
+      <img src="../../assets/icon_normal.png" class="ifm-img"/>
     </div>
     <div class="right-details" :style="{'width':itemWidth}">
       <div

@@ -9,7 +9,7 @@
             v-infinite-scroll="loadMore"
             infinite-scroll-disabled="loading"
             infinite-scroll-distance="10">
-            <information-item v-for="item in list" :key="item.id">{{ item }}</information-item>
+            <information-item  v-for="item in list" :key="item.id" @click.native="handleClickItem(item.id)">{{ item }}</information-item>
           </div>
         </div>
       </mt-tab-container-item>
@@ -67,10 +67,8 @@
           this.list.push(i);
         }
       },
-      handlerClickNav(index, f) {
-        console.log(index)
-        console.log(f)
-        this.selected = index;
+      handleClickItem(id){
+        this.$router.push({name:"项目详情",params:{bProjectId:id}})
       }
     }
   }

@@ -7,12 +7,11 @@ import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import Vue from 'vue'
 import UrlApi from './api/UrlApi'
-import Cube from 'cube-ui'
+import MuseUI from 'muse-ui';
+import 'muse-ui/dist/muse-ui.css';
 
-Vue.use(Cube)
-
-
-Vue.use(MintUI)
+Vue.use(MuseUI);
+Vue.use(MintUI);
 
 Vue.config.productionTip = false
 Vue.prototype.$urlApi = UrlApi;

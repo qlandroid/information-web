@@ -7,5 +7,14 @@ export default {
   },
   userDetails() {
     return postFetchUser("/userDetails");
+  },
+  getCities() {
+    return getFetch("/getCities");
+  },
+  getProjectTypes() {
+    return postFetchUser("/bproject/types")
+  },
+  insertProjectTypes(params) {
+    return postFetchUser("/bproject/insert", params);
   }
 }

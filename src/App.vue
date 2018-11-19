@@ -12,7 +12,10 @@
 
 <style>
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family : 微软雅黑,宋体, sans-serif;
+  }
+  .wrapper{
+
   }
 
   .w-25 {

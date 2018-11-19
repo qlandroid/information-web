@@ -28,6 +28,7 @@
 <script>
   import {Toast} from 'mint-ui';
   import localStory from "../api/LocalStroryHelper"
+  import { Indicator } from 'mint-ui';
 
   export default {
     name: "login",
@@ -60,12 +61,18 @@
           Toast('密码不正确');
           return
         }
+        Indicator.open({
+          text: '登录中...',
+          spinnerType: 'fading-circle'
+        });
         this.$urlApi.login(this.loginParams)
           .then(res => {
             localStory.saveToken(res.a,res.b);
             this.$router.push({name:"首页",params:{userId:res.user.id}})
+            Indicator.close();
           })
           .catch(err =>{
+            Indicator.close();
             Toast(err.response.data.message);
           })
       }

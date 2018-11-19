@@ -4,7 +4,7 @@
     <div class="header">
       <div class="font_div" :style="{'width':img.width}">
         <img :src="userDetails.headImg"
-             style="border:2px solid #fff;border-radius:120px;width: 120px;height: 120px;margin-top: 10px">
+             style="border:2px solid #fff;border-radius:80px;width: 80px;height: 80px;margin-top: 10px">
         <div class="font_div mt-3" :style="{'width':img.width}">
           <span style="margin-top: 10px">{{userDetails.niceName?userDetails.niceName:"没有名称哦"}}</span>
         </div>
